@@ -12,6 +12,7 @@ var config = require('./config');
 
 var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
+const dishRouter = require('./routes/dishRouter');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const { Session } = require('inspector');
@@ -48,6 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/promotions', promoRouter);
 app.use('/leaders', leaderRouter);
+app.use('/dishes',dishRouter);
 
 
 // catch 404 and forward to error handler
